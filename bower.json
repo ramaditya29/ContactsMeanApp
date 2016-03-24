@@ -1,0 +1,17 @@
+{
+  "name": "contactsapp",
+  "description": "\"Contacts App\"",
+  "main": "server.js",
+  "license": "ISC",
+  "moduleType": [
+    "amd"
+  ],
+  "homepage": "",
+  "dependencies": {
+    "angular": "^1.5.2",
+    "bootstrap": "^3.3.6",
+    "angular-route": "^1.5.2",
+    "angular-resource": "^1.5.2",
+    "font-awesome": "^4.5.0"
+  }
+}

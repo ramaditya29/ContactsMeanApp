@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="ContactsApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Contacts</title>
+    {% for cssFile in cssFiles %}
+    <link rel="stylesheet" href="{{cssFile}}">
+    {% endfor%}
+</head>
+<body>
+
+    <div class="container">
+        <!--div class="page-header">
+            <h1>Contacts</h1>
+        </div-->
+        <br/>
+        <div class="row">
+            <div class="col-sm-12" ng-include='"src/views/nav.client.tpl.html"'></div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12" ng-view></div>
+        </div>
+   
+
+    </div>
+
+
+    {% for jsFile in jsFiles %}
+    <script src="{{jsFile}}"></script>
+    {% endfor%}
+</body>
+</html>

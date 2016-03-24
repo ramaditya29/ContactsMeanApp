@@ -1,0 +1,28 @@
+<div class="container">
+	<form class="form-horizontal" role="form" name="userForm" novalidate>
+		<h1>Add Contact</h1>
+	    <div class="form-group">
+	      <label class="control-label col-sm-2" for="fname">FirstName:</label>
+	      <div class="col-sm-4">
+	        <input type="text" class="form-control" name="firstname" ng-model="data.firstname" placeholder="Firstname" required>
+	        <p ng-show="userForm.firstname.$invalid && !userForm.firstname.$pristine">Firstname is required</p>
+	        
+	      </div>
+	    </div>
+	    <div class="form-group">
+	      <label class="control-label col-sm-2">LastName:</label>
+	      <div class="col-sm-4">          
+	        <input type="text" class="form-control" name="lastname" ng-model="data.lastname" placeholder="Lastname" required>
+	         <p ng-show="userForm.lastname.$invalid && !userForm.lastname.$pristine">Lastname is required</p>
+	      </div>
+	    </div>
+	    
+
+	    <div class="form-group">        
+	      <div class="col-sm-offset-2 col-sm-10">
+	        <button type="button" class="btn btn-success" ng-click="addContact()" ng-disabled="userForm.$invalid">Create Contact</button>
+	      </div>
+	    </div>
+  	</form>
+
+</div>

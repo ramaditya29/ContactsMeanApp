@@ -1,0 +1,17 @@
+<table class="table table-bordered table-hover">
+	<thead>
+		<tr>
+            <th ng-repeat='field in fields'>
+                {{field}}
+            </th>
+        </tr>
+	</thead>	
+	<tbody>
+		<tr ng-repeat="contact in contacts">
+			<td>{{contact.firstname}}</td>
+			<td>{{contact.lastname}}</td>
+			
+			<td><a href="#/edit/{{contact.firstname}}"> edit </a>| <a ng-click="deleteContact(contact)"> delete </a></td>
+		</tr>
+	</tbody>
+</table>
