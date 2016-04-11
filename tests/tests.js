@@ -38,13 +38,14 @@ describe("Main Test", function(){
 
 		it("Get All the contacts from the /api/contact", function(){
 
-			$httpBackend.expectGET('/api/contact')
+			$httpBackend.whenGET('/api/contact')
 				.respond([
 					 { firstname: 'Aditya', lastname: 'V', _id: 1, __v:0},
 					 { firstname: 'Rajesh', lastname: 'K', _id: 2, __v:0}
 					]);
 
 			$scope = {};	
+			$httpBackend.expectGET('src/views/list.client.tpl.html').respond("My Data");
 			var controller = $controller('ListController', {$scope: $scope});
 			$scope.contacts = Contact.query();
 			
