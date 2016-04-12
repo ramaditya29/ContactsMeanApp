@@ -38,15 +38,15 @@ module.exports = function(grunt){
                 }
             }
         },    
-		jshint: {
-			all:{
-				src: watchFiles.serverJS.concat(watchFiles.clientJS),
-				options: {
-					jshintrc: true
-				}
+	jshint: {
+		all:{
+			src: watchFiles.serverJS.concat(watchFiles.clientJS),
+			options: {
+				jshintrc: true
 			}
-		},
-		uglify: {
+		}
+	},
+	uglify: {
             production: {
                 options: {
                     mangle: false
@@ -63,42 +63,42 @@ module.exports = function(grunt){
                 }
             }
         },
-		nodemon: {
-			dev: {
-				script: 'server.js',
-				options:{
-					ext: 'js,html',
-					watch: watchFiles.serverViews.concat(watchFiles.serverJS)
-				}
-			}
-		},
-		'node-inspector': {
-			custom: {
-                options: {
-                    'web-port': 1337,
-                    'web-host': 'localhost',
-                    'debug-port': 5858,
-                    'save-live-edit': true,
-                    'no-preload': true,
-                    'stack-trace-limit': 50,
-                    'hidden': []
-                }
-            }
-		},
-		concurrent: {
-			default: ['nodemon', 'watch'],
-			options: {
-				logConcurrentOutput: true,
-                limit: 10
-			}
-		},
-		karma: {
-			unit:{
-				configFile: 'karma.conf.js'
+	nodemon: {
+		dev: {
+			script: 'server.js',
+			options:{
+				ext: 'js,html',
+				watch: watchFiles.serverViews.concat(watchFiles.serverJS)
 			}
 		}
+	},
+	'node-inspector': {
+		custom: {
+	        options: {
+	            'web-port': 1337,
+	            'web-host': 'localhost',
+	            'debug-port': 5858,
+	            'save-live-edit': true,
+	            'no-preload': true,
+	            'stack-trace-limit': 50,
+	            'hidden': []
+	        }
+	    }
+	},
+	concurrent: {
+		default: ['nodemon', 'watch'],
+		options: {
+			logConcurrentOutput: true,
+        		limit: 10
+		}
+	},
+	karma: {
+		unit:{
+			configFile: 'karma.conf.js'
+		}
+	}
 
-	});
+});
 
 	//Loading of the grunt tasks 
 
@@ -122,16 +122,16 @@ module.exports = function(grunt){
 
 
 	// Making grunt default to force in order not to break the project.
-    grunt.option('force', true);
+    	grunt.option('force', true);
 
-    // A Task for loading the configuration object
-    grunt.task.registerTask('loadConfig', 'Task that loads the config into a grunt option.', function() {
-        //var init = require('./config/init')();
-        var config = require('./config/config');
+        // A Task for loading the configuration object
+    	grunt.task.registerTask('loadConfig', 'Task that loads the config into a grunt option.', function() {
+        	//var init = require('./config/init')();
+        	var config = require('./config/config');
 
-        grunt.config.set('applicationJavaScriptFiles', config.assets.app.js);
-        //grunt.config.set('applicationCSSFiles', config.assets.app.css);
-    });
+        	grunt.config.set('applicationJavaScriptFiles', config.assets.app.js);
+        	//grunt.config.set('applicationCSSFiles', config.assets.app.css);
+    	});
 
 	/* 
 		* Default task. It will be called when we executed command like grunt in your command line with no commands
