@@ -20,6 +20,8 @@
     "swig": "^1.4.2"
   },
   "devDependencies": {
+    "flightplan": "^0.6.13",
+    "fly": "^1.2.4",
     "grunt-concurrent": "~1.0.0",
     "grunt-contrib-csslint": "^0.3.1",
     "grunt-contrib-cssmin": "~0.10.0",
