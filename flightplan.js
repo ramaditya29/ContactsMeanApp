@@ -3,10 +3,10 @@ var plan = require('flightplan');
  
 // configuration 
 plan.target('production', {
-  host: 'Ip Address',
-  username: 'user name',
+  host: 'ip address',
+  username: 'username',
   agent: process.env.SSH_AUTH_SOCK,
-  privateKey: '.pem file'
+  privateKey: 'privatekey' //Because AWS requires private key to access the vms
 });
  
 
@@ -33,6 +33,8 @@ plan.remote(function(remote) {
   remote.log('Install dependencies');
   remote.sudo('npm --production --prefix ~/' + tmpDir + ' install ~/' + tmpDir, {user: 'ubuntu'});
  
+  remote.log("Installing the UI dependencies");
+  remote.exec("cd /home/ubuntu/" + tmpDir + ";" + "ls" + ";" + "bower install");
   remote.log('Reload application');
   //remote.sudo('ln -snf ~/' + tmpDir + ' ~/example-com', {user: 'www'});
   //remote.sudo('pm2 reload example-com', {user: 'www'});
