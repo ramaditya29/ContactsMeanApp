@@ -1,30 +1,30 @@
 # ContactsMeanApp
 
--->MEAN App
--->This is a single page App done in AngularJS
--->Here you can display all the contacts list
--->You can add new contact to it
--->Minification of Angular Code(Grunt plugins)
--->Unit Testing of Angular(Karma and Jasmine)
---> Deployment of Code in your Production Environment(AWS,Heroku) from your local system using Flightplan scripts and fly command
+1.MEAN App
+2.This is a single page App done in AngularJS
+3.Here you can display all the contacts list
+4.You can add new contact to it
+5.Minification of Angular Code(Grunt plugins)
+6.Unit Testing of Angular(Karma and Jasmine)
+7.Deployment of Code in your Production Environment(AWS,Heroku) from your local system using Flightplan scripts and fly command
 
 Here I used 
 
-Database:
+1.Database:
 MongoDB
 
-Node Middle wares:
-Express --> Node Framework
-Mongoose
-Grunt
-Karma
-Jasmine
-Flightplan
+2.Node Middle wares:
+a.Express --> Node Framework
+b.Mongoose
+c.Grunt
+d.Karma
+e.Jasmine
+f.Flightplan
 
 
-Angular 
-Angular-Route
-Angular-Resource
-Angular-Mock
-Bootstrap
+3.Angular "\n" 
+a.Angular-Route
+b.Angular-Resource
+c.Angular-Mock
+d.Bootstrap
 
