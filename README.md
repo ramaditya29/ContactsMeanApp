@@ -22,7 +22,7 @@ e.Jasmine
 f.Flightplan
 
 
-3.Angular "\n" 
+3.Angular 
 a.Angular-Route
 b.Angular-Resource
 c.Angular-Mock
